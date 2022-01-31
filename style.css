@@ -631,6 +631,54 @@ span {
 .invite {
   font-weight: 500;
   font-size: 1.2rem;
+} /* Footer section */
+
+.footer {
+  background-color: #2d5ea7;
+  padding: 6rem 0;
+  position: relative;
+}
+.footer__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 2rem;
+}
+.footer__col {
+  color: var(--white);
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+.footer__col h2 {
+  margin-bottom: 1.5rem;
+}
+.footer__back-to-top {
+  position: absolute;
+  right: 5rem;
+  bottom: 10rem;
+  background-color: var(--blue-300);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.footer__back-to-top:hover {
+  opacity: 0.9;
+}
+.footer__back-to-top .fa-chevron-up {
+  color: var(--white);
+}
+.footer__copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #004c8a;
+  padding: 1.5rem 0;
+  display: grid;
+  place-items: center;
+}
+.footer__copyright h2 {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 @media (max-width: 800px) {
@@ -655,55 +703,6 @@ span {
     .col-2 {
       padding: 1rem;
     }
-  }
-  /* Footer section */
-
-  .footer {
-    background-color: #2d5ea7;
-    padding: 6rem 0;
-    position: relative;
-  }
-  .footer__box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-bottom: 2rem;
-  }
-  .footer__col {
-    color: var(--white);
-    padding: 0 2rem;
-    margin: 2rem 0;
-  }
-  .footer__col h2 {
-    margin-bottom: 1.5rem;
-  }
-  .footer__back-to-top {
-    position: absolute;
-    right: 5rem;
-    bottom: 10rem;
-    background-color: var(--blue-300);
-    padding: 1rem;
-    border-radius: 5px;
-  }
-  .footer__back-to-top:hover {
-    opacity: 0.9;
-  }
-  .footer__back-to-top .fa-chevron-up {
-    color: var(--white);
-  }
-  .footer__copyright {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #004c8a;
-    padding: 1.5rem 0;
-    display: grid;
-    place-items: center;
-  }
-  .footer__copyright h2 {
-    color: var(--white);
-    font-size: 1.3rem;
-    font-weight: 400;
   }
   @media (max-width: 768px) {
     .footer__box {
