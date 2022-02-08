@@ -18,6 +18,7 @@
   --x1-5: 1.5rem;
   --lett-sp: 2px;
   --mb-6: 6rem;
+  --padding-6: 6rem 0;
   /* Colors */
   --dark: #2b2e31;
   --gray: #696c6e;
@@ -40,6 +41,8 @@ body {
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 h1,
@@ -69,7 +72,7 @@ button {
   cursor: pointer;
 }
 
-/* Utilities */
+/* Utilities classes*/
 
 .container {
   padding: 0 30px;
@@ -77,6 +80,23 @@ button {
   max-width: 80%;
   margin: 0 auto;
 }
+.h2--heading {
+  font-size: var(--x2-5);
+  color: var(--gray);
+  text-transform: var(--upper);
+  margin-bottom: var(--mb-6);
+  letter-spacing: var(--lett-sp);
+  position: relative;
+}
+.h2--heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  width: 5%;
+  border: 3px solid var(--gray);
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 30px;
@@ -152,7 +172,6 @@ header {
   transform: scaleX(1);
 }
 .nav__logo {
-  background-color: var(--white);
   padding: 0.5rem;
   border-radius: 3px;
 }
@@ -280,7 +299,6 @@ header {
 .showcase__inner-content h2 {
   color: var(--white);
   margin-bottom: 2rem;
-  text-transform: var(--upper);
   font-size: 3rem;
   letter-spacing: var(--lett-sp);
 }
@@ -335,23 +353,7 @@ header {
 
 .offers {
   position: relative;
-  padding: 6rem 0;
-}
-.offers h2 {
-  font-size: var(--x2-5);
-  color: var(--gray);
-  text-transform: var(--upper);
-  margin-bottom: var(--mb-6);
-  letter-spacing: var(--lett-sp);
-  position: relative;
-}
-.offers h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1.5rem;
-  width: 5%;
-  border: 3px solid var(--gray);
+  padding: var(--padding-6);
 }
 .offers::before {
   content: '';
@@ -422,27 +424,11 @@ header {
 /* Mentorship section */
 
 .mentorship {
-  padding: 6rem 0;
+  padding: var(--padding-6);
 }
 .mentorship__box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-.mentorship h2 {
-  margin-bottom: var(--mb-6);
-  text-transform: var(--upper);
-  font-size: var(--x2-5);
-  color: var(--gray);
-  letter-spacing: 2px;
-  position: relative;
-}
-.mentorship h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1.5rem;
-  width: 5%;
-  border: 3px solid var(--gray);
 }
 .mentorship__person img {
   border-radius: 50%;
@@ -489,26 +475,10 @@ header {
 
 .testimonials {
   position: relative;
-  padding: 6rem 0;
+  padding: var(--padding-6);
   background-image: linear-gradient(135deg, #ffffff 0%, #b6d6f1 100%);
 }
-.testimonials h2 {
-  margin-bottom: var(--mb-6);
-  text-transform: var(--upper);
-  color: var(--gray);
-  font-size: var(--x2-5);
-  position: relative;
-}
-.testimonials h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1.5rem;
-  width: 5%;
-  border: 3px solid var(--gray);
-}
 .testimonials__box {
-  /* grid-template-columns: repeat(2, 1fr); */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 3rem;
@@ -562,6 +532,28 @@ header {
   .testimonials h2 {
     font-size: var(--x1-5);
   }
+}
+
+/* Partnership section */
+
+.partnership {
+  position: relative;
+  padding: var(--padding-6);
+}
+.partnership__box {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+.partnership__partner {
+  width: 10rem;
+}
+.partnership__partner:nth-child(4) {
+  width: 4.4rem;
+}
+.partnership__partner:nth-child(5) {
+  width: 4.375rem;
 }
 
 /* About project section */
@@ -637,7 +629,7 @@ span {
 
 .footer {
   background-color: #2d5ea7;
-  padding: 6rem 0;
+  padding: var(--padding-6);
   position: relative;
 }
 .footer__box {
@@ -681,6 +673,9 @@ span {
   color: var(--white);
   font-size: 1.3rem;
   font-weight: 400;
+}
+.slap-logo-footer {
+  width: 150px;
 }
 
 @media (max-width: 768px) {
