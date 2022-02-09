@@ -680,6 +680,9 @@ span {
 .slap-logo-footer {
   width: 150px;
 }
+.slap-footer {
+  font-weight: 500;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -701,6 +704,9 @@ span {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     margin-bottom: 2rem;
     text-align: var(--jc-c);
+  }
+  .slap-footer {
+    font-weight: 500;
   }
   .footer__back-to-top {
     position: absolute;
