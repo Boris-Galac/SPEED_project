@@ -431,10 +431,10 @@ header {
   grid-template-columns: repeat(2, 1fr);
 }
 .mentorship__person img {
-  border-radius: 50%;
+  border: 1px solid var(--gray-200);
+  border-radius: 500px;
   min-width: 50%;
   padding: 3rem;
-  border: 1px solid var(--gray-200);
   margin: auto;
 }
 .mentorship__text h3 {
@@ -641,6 +641,9 @@ span {
   color: var(--white);
   padding: 0 2rem;
   margin: 2rem 0;
+}
+.creative-commons {
+  mix-blend-mode: color-dodge;
 }
 .footer__col h2 {
   margin-bottom: 1.5rem;
